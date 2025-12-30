@@ -92,7 +92,7 @@ const API_BASE = 'tables';
 // === AI Classification API Configuration ===
 // Replace PLACEHOLDER_WORKER_URL with your actual Cloudflare Worker URL after deployment
 // Example: https://asset-classifier.your-subdomain.workers.dev
-const AI_API_BASE = 'PLACEHOLDER_WORKER_URL';
+const AI_API_BASE = 'https://aset1-ai-classify.raqeemx-ai.workers.dev';
 
 // === IndexedDB Functions ===
 async function initDatabase() {
@@ -2188,7 +2188,7 @@ async function suggestCategoriesFromImages() {
     }
     
     // Check 3: Is AI_API_BASE configured?
-    if (!AI_API_BASE || AI_API_BASE === 'PLACEHOLDER_WORKER_URL') {
+    if (!AI_API_BASE || AI_API_BASE === 'https://aset1-ai-classify.raqeemx-ai.workers.dev') {
         showStatus('<i class="fas fa-cog ml-2"></i>لم يتم إعداد خدمة الذكاء الاصطناعي بعد. تواصل مع المسؤول.', 'error');
         return;
     }
