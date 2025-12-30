@@ -2188,10 +2188,10 @@ async function suggestCategoriesFromImages() {
     }
     
     // Check 3: Is AI_API_BASE configured?
-    if (!AI_API_BASE || AI_API_BASE === 'https://aset1-ai-classify.raqeemx-ai.workers.dev') {
-        showStatus('<i class="fas fa-cog ml-2"></i>لم يتم إعداد خدمة الذكاء الاصطناعي بعد. تواصل مع المسؤول.', 'error');
-        return;
-    }
+if (!AI_API_BASE || AI_API_BASE === 'PLACEHOLDER_WORKER_URL') {
+  showStatus('<i class="fas fa-cog ml-2"></i>لم يتم إعداد خدمة الذكاء الاصطناعي بعد. تواصل مع المسؤول.', 'error');
+  return;
+}
     
     // Start loading
     setButtonLoading(true);
