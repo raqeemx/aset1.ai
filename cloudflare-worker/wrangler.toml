@@ -1,0 +1,24 @@
+# Cloudflare Worker Configuration
+# نظام جرد الأصول - AI Classification Worker
+
+name = "asset-classifier"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+# Account ID - Replace with your actual Cloudflare account ID
+# account_id = "YOUR_ACCOUNT_ID"
+
+# Route configuration (optional - for custom domains)
+# routes = [
+#   { pattern = "api.yourdomain.com/*", zone_name = "yourdomain.com" }
+# ]
+
+# Workers.dev subdomain (enabled by default)
+workers_dev = true
+
+# Environment variables (non-secret)
+[vars]
+ENVIRONMENT = "production"
+
+# Note: OPENAI_API_KEY should be added as a secret, not here
+# Use: wrangler secret put OPENAI_API_KEY
